@@ -4,13 +4,14 @@ $clay: #A68E90;
 *{
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .App {
   text-align: center;
   // background-image: url("https://car-images.bauersecure.com/pagefiles/68068/1752x1168/speedtail_050.jpg?mode=max&quality=90&scale=down");
-  height: 135vh;
+  height: 140vh;
 
   /* Center and scale the image nicely */
   background-position: center;
@@ -27,7 +28,7 @@ $clay: #A68E90;
     display: flex;
     /* flex-direction: row; */
     // background: red;
-    height: 135vh;
+    height: 140vh;
     width: 25%;
     border-right: 1px solid $gray;
     .top-side{
@@ -83,7 +84,15 @@ $clay: #A68E90;
       // padding: 15px;
     }
   }
+  .title-price-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     .car-title{
+      width: 60%;
       font-weight: 100;
       // line-height: .2;
       padding-left: 15px;
@@ -111,6 +120,21 @@ $clay: #A68E90;
     //   height: 300px;
     //   z-index: 99999;
     // }
+    .price{
+      background: #FFFFFF;
+      margin-right: 40px;
+      height: 175px;
+      width: 178px;
+      background: transparent;
+      p{
+        font-weight: bold;
+      }
+    }
+        .price-img{
+         height: 100px;
+         width: auto;
+        }
+  }
     .btn-container{
       display: -webkit-box;
       display: -ms-flexbox;
@@ -184,8 +208,13 @@ $clay: #A68E90;
         margin: 15px 5px 0 15px;
       }
       .artical{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         line-height: 1.9em;
         padding: 10px;
         font-size: 1em;
@@ -206,6 +235,7 @@ $clay: #A68E90;
   margin: 0 10px;
   width: 99%;
   height: 99%;
+  -webkit-transition: all 1.4s ease-in-out;
   transition: all 1.4s ease-in-out;
   // span{
   //   display: flex;
