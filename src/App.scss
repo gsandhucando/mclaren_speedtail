@@ -3,7 +3,7 @@ $clay: #A68E90;
 
 .App {
   text-align: center;
-  background-image: url("https://car-images.bauersecure.com/pagefiles/68068/1752x1168/speedtail_050.jpg?mode=max&quality=90&scale=down");
+  // background-image: url("https://car-images.bauersecure.com/pagefiles/68068/1752x1168/speedtail_050.jpg?mode=max&quality=90&scale=down");
   height: 100vh;
 
   /* Center and scale the image nicely */
@@ -49,21 +49,99 @@ $clay: #A68E90;
       padding: 15px;
     }
     .car-title{
+      font-weight: 100;
       line-height: .2;
       padding-left: 15px;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      .h1-color{
+      .h1-thin{
         color: $clay;
+        font-weight: 300;
+      }
+      .h1-bold{
+        font-weight: 700;
       }
     }
+    // .photos{
+    //   // background: red;
+    //   height: 300px;
+    //   z-index: 99999;
+    // }
+    .btn-container{
+      display: flex;
+      align-items: center;
+      // background: white;
+      width: 160px;
+      cursor: pointer;
+    .img-btn{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #A68E90;
+      border-radius: 50%;
+      height: 35px;
+      width: 35px;
+      margin-left: 10px;
+      padding-left: 5px;
+      color: #0D0D0D;
+      cursor: pointer;
+      &:hover{
+        background: white;
+      }
+    }
+    p{
+      margin-left: 10px;
+    }
+  }
   }
   }
 }
 
-
-
 .icon{
   margin-right: 5px;
+}
+
+.photos {
+  background: transparent;
+  position: fixed;
+  overflow: hidden;
+  margin: 0 10px;
+  width: 99%;
+  height: 99%;
+  // span{
+  //   display: flex;
+  //   justify-content: flex-end;
+  //   padding-right: 15px;
+  // }
+}
+
+.photos > div {
+  position: absolute;
+  width: 99%;
+  height: 99%;
+  will-change: transform;
+}
+
+.photos > div > div {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100vw;
+  height: 100vh;
+  will-change: transform;
+  box-shadow: 0 62.5px 125px -25px rgba(50, 50, 73, 0.5), 0 37.5px 75px -37.5px rgba(0, 0, 0, 0.6);
+}
+
+.x-span{
+  // display: flex;
+  // justify-content: flex-end;
+  // padding-right: 15px;
+  position: fixed;
+  top: 10%;
+  right: 5%;
+  // background: red;
+  z-index: 999999;
+  cursor: pointer;
+  size: 7x;
 }
