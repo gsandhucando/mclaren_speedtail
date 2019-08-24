@@ -1,0 +1,69 @@
+$gray: #DCDBDD;
+$clay: #A68E90;
+
+.App {
+  text-align: center;
+  background-image: url("https://car-images.bauersecure.com/pagefiles/68068/1752x1168/speedtail_050.jpg?mode=max&quality=90&scale=down");
+  height: 100vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .front-page-container{
+    display: flex;
+  .sidebar{
+    display: flex;
+    /* flex-direction: row; */
+    /* background: red; */
+    height: 100vh;
+    width: 25%;
+    border-right: 1px solid $gray;
+    .top-side{
+      display: flex;
+      /* background: red; */
+      width: 100%;
+      // padding-left: 10px;
+      p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 5%;
+        width: 100%;
+        border-bottom: 1px solid #DCDBDD;
+        padding-bottom: 10px;
+        font-weight: bold;
+      }
+    }
+  }
+  .content-container{
+    width: 75%;
+    input{
+      font-size: 1.0em;
+      width: 90%;
+      background: transparent;
+      border: none;
+      // border-bottom: 1px solid $gray;
+      margin: 10px;
+      // background: red;
+      padding: 15px;
+    }
+    .car-title{
+      line-height: .2;
+      padding-left: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .h1-color{
+        color: $clay;
+      }
+    }
+  }
+  }
+}
+
+
+
+.icon{
+  margin-right: 5px;
+}
