@@ -6,7 +6,7 @@ import { useGesture } from 'react-use-gesture'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWindowClose } from '@fortawesome/free-solid-svg-icons'
 
-const close = <FontAwesomeIcon size='3x' className='icon' icon={faWindowClose} />
+const close = <FontAwesomeIcon size='2x' className='icon' icon={faWindowClose} />
 
 // const pages = [
 //   'https://car-images.bauersecure.com/pagefiles/68068/1752x1168/speedtail_051.jpg?mode=max&quality=90&scale=down',

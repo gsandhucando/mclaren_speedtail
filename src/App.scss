@@ -1,63 +1,106 @@
 $gray: #DCDBDD;
 $clay: #A68E90;
 
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
   // background-image: url("https://car-images.bauersecure.com/pagefiles/68068/1752x1168/speedtail_050.jpg?mode=max&quality=90&scale=down");
-  height: 100vh;
+  height: 135vh;
 
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   .front-page-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    // background: red;
   .sidebar{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     /* flex-direction: row; */
-    /* background: red; */
-    height: 100vh;
+    // background: red;
+    height: 135vh;
     width: 25%;
     border-right: 1px solid $gray;
     .top-side{
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
       /* background: red; */
       width: 100%;
       // padding-left: 10px;
       p {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         height: 5%;
         width: 100%;
         border-bottom: 1px solid #DCDBDD;
-        padding-bottom: 10px;
+        // padding-bottom: 10px;
         font-weight: bold;
       }
     }
   }
   .content-container{
-    width: 75%;
+    // background: rebeccapurple;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
+    height: 100vh;
+    width: 100%;
+    .top-search-price{
     input{
-      font-size: 1.0em;
-      width: 90%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      font-size: 1.1em;
+      color: $clay;
+      width: 80%;
       background: transparent;
       border: none;
-      // border-bottom: 1px solid $gray;
-      margin: 10px;
+      border-bottom: 1px solid $gray;
+      margin: 25px;
       // background: red;
-      padding: 15px;
+      // padding: 15px;
     }
+  }
     .car-title{
       font-weight: 100;
-      line-height: .2;
+      // line-height: .2;
       padding-left: 15px;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
       .h1-thin{
         color: $clay;
         font-weight: 300;
+        font-size: 2.2em;
       }
       .h1-bold{
         font-weight: 700;
@@ -69,25 +112,35 @@ $clay: #A68E90;
     //   z-index: 99999;
     // }
     .btn-container{
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      align-items: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       // background: white;
       width: 160px;
       cursor: pointer;
     .img-btn{
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
-      align-items: center;
-      justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       border: 1px solid #A68E90;
       border-radius: 50%;
       height: 35px;
       width: 35px;
       margin-left: 10px;
-      padding-left: 5px;
       color: #0D0D0D;
       cursor: pointer;
       &:hover{
-        background: white;
+        background: #A68E90;
+        color: white;
       }
     }
     p{
@@ -95,11 +148,55 @@ $clay: #A68E90;
     }
   }
   }
+  .press-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    // background: violet;
+    .overview{
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      text-align: center;
+      height: 50vh;
+      background: #FFFFFF;
+      text-align: justify;
+      margin: 430px 10px 0 10px;
+      border-radius: 5px;
+      overflow-y: scroll;
+      img {
+        height: 220px;
+        width: auto;
+        margin: 15px 5px 0 15px;
+      }
+      .artical{
+        display: flex;
+        flex-direction: column;
+        line-height: 1.9em;
+        padding: 10px;
+        font-size: 1em;
+      }
+    }
+  }
   }
 }
 
-.icon{
-  margin-right: 5px;
+.icon-bar{
+  margin-right: 15px;
 }
 
 .photos {
@@ -109,6 +206,7 @@ $clay: #A68E90;
   margin: 0 10px;
   width: 99%;
   height: 99%;
+  transition: all 1.4s ease-in-out;
   // span{
   //   display: flex;
   //   justify-content: flex-end;
@@ -130,7 +228,8 @@ $clay: #A68E90;
   width: 100vw;
   height: 100vh;
   will-change: transform;
-  box-shadow: 0 62.5px 125px -25px rgba(50, 50, 73, 0.5), 0 37.5px 75px -37.5px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 62.5px 125px -25px rgba(50, 50, 73, 0.5), 0 37.5px 75px -37.5px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 62.5px 125px -25px rgba(50, 50, 73, 0.5), 0 37.5px 75px -37.5px rgba(0, 0, 0, 0.6);
 }
 
 .x-span{
@@ -144,4 +243,8 @@ $clay: #A68E90;
   z-index: 999999;
   cursor: pointer;
   size: 7x;
+  color: white;
+  &:hover{
+    color: #0D0D0D;
+  }
 }
