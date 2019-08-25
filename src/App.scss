@@ -11,13 +11,13 @@ $clay: #A68E90;
 .App {
   text-align: center;
   // background-image: url("https://car-images.bauersecure.com/pagefiles/68068/1752x1168/speedtail_050.jpg?mode=max&quality=90&scale=down");
-  height: 140vh;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   .front-page-container{
+    height: 100vh;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -28,7 +28,7 @@ $clay: #A68E90;
     display: flex;
     /* flex-direction: row; */
     // background: red;
-    height: 140vh;
+    height: 100vh;
     width: 25%;
     border-right: 1px solid $gray;
     .top-side{
@@ -79,7 +79,7 @@ $clay: #A68E90;
       background: transparent;
       border: none;
       border-bottom: 1px solid $gray;
-      margin: 25px;
+      margin: 15px;
       // background: red;
       // padding: 15px;
     }
@@ -172,56 +172,64 @@ $clay: #A68E90;
     }
   }
   }
-  .press-container{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    height: 100%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    // background: violet;
-    .overview{
+}
+    .press-container{
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      text-align: center;
-      height: 50vh;
-      background: #FFFFFF;
-      text-align: justify;
-      margin: 430px 10px 0 10px;
-      border-radius: 5px;
-      overflow-y: scroll;
-      img {
-        height: 220px;
-        width: auto;
-        margin: 15px 5px 0 15px;
-      }
-      .artical{
+      -webkit-box-align: end;
+          -ms-flex-align: end;
+              align-items: flex-end;
+      // height: 100vh;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: end;
+          -ms-flex-pack: end;
+              justify-content: flex-end;
+      // background: violet;
+      .overview{
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
-        line-height: 1.9em;
+        text-align: center;
+        height: 100%;
+        background: #FFFFFF;
+        text-align: justify;
+        // margin: 430px 10px 0 10px;
+        border-radius: 5px;
+        // overflow-y: scroll;
         padding: 10px;
-        font-size: 1em;
+        .press-img-container{
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+        img {
+          height: 220px;
+          width: auto;
+          margin: 15px 5px 0 15px;
+        }
+      }
+        .artical{
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          line-height: 1.9em;
+          padding: 10px;
+          font-size: 1em;
+          text-align: justify;
+          padding: 0 10px 0 10px;
+        }
       }
     }
-  }
-  }
 }
 
 .icon-bar{
