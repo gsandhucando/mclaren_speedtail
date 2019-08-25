@@ -50,7 +50,6 @@ function App() {
 
   const clickHandle = () => {
     setShowPics(!showPics);
-    console.log("clicked");
   };
 
   let updateDimensions = () => {
