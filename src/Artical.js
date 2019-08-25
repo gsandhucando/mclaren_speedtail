@@ -2,14 +2,15 @@ import React from 'react';
 
 const Artical = ({mobile}) => {
   return(
-    <div className='press-container'>
+    // {!mobile ? 'press-container' : 'mobile-press'}
+    <div className={!mobile ? 'press-container' : 'mobile-press'}>
     <div className='overview'>
     <div className='press-img-container'>
       <img src='https://car-images.bauersecure.com/pagefiles/68068/1752x1168/speedtail_050.jpg?mode=max&quality=90&scale=down' alt='car' />
       <img src='https://car-images.bauersecure.com/pagefiles/68068/1752x1168/speedtail_051.jpg?mode=max&quality=90&scale=down' alt='car' />
       <img src='https://car-images.bauersecure.com/pagefiles/68068/1752x1168/speedtail_059.jpg?mode=max&quality=90&scale=down' alt='car' />
       </div>
-      <div className='artical'>
+      <div className={!mobile ? 'artical' : 'mobile-artical'}>
       <h3>Overview</h3>
       <p>
       <span style={{color: '#A68E90', fontWeight: 'bold', fontSize: 23}}>A</span>s the spiritual successor to the legendary McLaren F1, the 2020 McLaren Speedtail evokes similar desires with its one-of-a-kind design and out-of-this-world performance. The streamlined speedster is the fastest and most powerful McLaren ever built, and it represents the pinnacle of the company's exotic lineup.

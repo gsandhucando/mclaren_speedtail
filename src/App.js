@@ -53,11 +53,28 @@ function App() {
     console.log("clicked");
   };
 
+  let updateDimensions = () => {
+    if (window.innerWidth <= 500) {
+      setMobile(true);
+    } else {
+      setMobile(false);
+    }
+  };
+
+  useEffect(() => {
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+    return () => {
+      window.removeEventListener("resize", updateDimensions);
+    };
+  }, []);
+
   return (
+    // {!mobile ? "App" : 'mobile-app'}
     <div className="App">
-      <div style={styles.background} className="front-page-container">
+      <div style={styles.background} className={!mobile ? "front-page-container" : "mobile-app"}>
         {/* <img className='img' src='https://car-images.bauersecure.com/pagefiles/68068/1752x1168/speedtail_050.jpg?mode=max&quality=90&scale=down' alt='car' /> */}
-        <div className="sidebar">
+        <div className={!mobile ? "sidebar" : "mobile-side"}>
           <div className="top-side">
             <div
               style={showPics ? styles.showPhotos : styles.hidePhotos}
@@ -69,25 +86,26 @@ function App() {
           </div>
         </div>
         <div className="content-container">
-          <div className="top-search-price">
+          <div style={mobile? {visibility: 'hidden'} : null} className="top-search-price">
             <input placeholder="Search by model" />
           </div>
-          <div className="title-price-container">
-            <div className="car-title">
-              <h1 className="h1-thin">Heir To the Throne</h1>
+          {/* {!mobile ? "title-price-container" : "mobile-title"} */}
+          <div className={!mobile ? "title-price-container" : "mobile-title"}>
+            <div className={!mobile ? "car-title" : "mobile-car-title"}>
+              <h1 className={!mobile ? "h1-thin" : "h1-mobile"}>Heir To the Throne</h1>
               <h1 className="h1-bold">McLaren Speedtail</h1>
               <h1>Unveiled</h1>
             </div>
-            <div className="price">
+            <div style={mobile? {visibility: 'hidden'} : null} className="price">
               <img
                 className="price-img"
                 src="https://car-images.bauersecure.com/pagefiles/68068/1752x1168/speedtail_050.jpg?mode=max&quality=90&scale=down"
                 alt="car"
               />
-              <p>$2.25 Million</p>
+              <p >$2.25 Million</p>
             </div>
           </div>
-          <div onClick={clickHandle} className="btn-container">
+          <div onClick={clickHandle} className={!mobile ? "btn-container" : "mobile-btn"}>
             <div className="img-btn">{imgs}</div>
             <p>View Photos</p>
           </div>
